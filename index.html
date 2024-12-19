@@ -1,392 +1,377 @@
 <!DOCTYPE html>
 <html lang="en" class="light">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sahil Das - Python & ML Developer Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Roboto+Mono&display=swap"
-      rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Roboto+Mono&display=swap"
+        rel="stylesheet"
     />
     <script>
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            fontFamily: {
-              sans: ["Poppins", "sans-serif"],
-              mono: ['"Roboto Mono"', "monospace"],
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ["Poppins", "sans-serif"],
+                        mono: ['"Roboto Mono"', "monospace"],
+                    },
+                    keyframes: {
+                        wave: {
+                            "0%": { transform: "rotate(0.0deg)" },
+                            "10%": { transform: "rotate(14deg)" },
+                            "20%": { transform: "rotate(-8deg)" },
+                            "30%": { transform: "rotate(14deg)" },
+                            "40%": { transform: "rotate(-4deg)" },
+                            "50%": { transform: "rotate(10.0deg)" },
+                            "60%": { transform: "rotate(0.0deg)" },
+                            "100%": { transform: "rotate(0.0deg)" },
+                        },
+                    },
+                    animation: {
+                        "waving-hand": "wave 2s linear infinite",
+                    },
+                },
             },
-            keyframes: {
-              wave: {
-                "0%": { transform: "rotate(0.0deg)" },
-                "10%": { transform: "rotate(14deg)" },
-                "20%": { transform: "rotate(-8deg)" },
-                "30%": { transform: "rotate(14deg)" },
-                "40%": { transform: "rotate(-4deg)" },
-                "50%": { transform: "rotate(10.0deg)" },
-                "60%": { transform: "rotate(0.0deg)" },
-                "100%": { transform: "rotate(0.0deg)" },
-              },
-            },
-            animation: {
-              "waving-hand": "wave 2s linear infinite",
-            },
-          },
-        },
-      };
+        };
     </script>
     <style>
-      body {
-        font-family: "Poppins", sans-serif;
-      }
-      @keyframes fadeInUp {
-        from {
-          opacity: 0;
-          transform: translateY(20px);
+        body {
+            font-family: "Poppins", sans-serif;
         }
-        to {
-          opacity: 1;
-          transform: translateY(0);
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
-      }
-      .animate-fadeInUp {
-        animation: fadeInUp 0.5s ease-out;
-      }
-      .animate-delay-100 {
-        animation-delay: 100ms;
-      }
-      .animate-delay-200 {
-        animation-delay: 200ms;
-      }
-      .animate-delay-300 {
-        animation-delay: 300ms;
-      }
+        .animate-fadeInUp {
+            animation: fadeInUp 0.5s ease-out;
+        }
+        .animate-delay-100 {
+            animation-delay: 100ms;
+        }
+        .animate-delay-200 {
+            animation-delay: 200ms;
+        }
+        .animate-delay-300 {
+            animation-delay: 300ms;
+        }
     </style>
-  </head>
-  <body
+</head>
+<body
     class="min-h-screen bg-gradient-to-br from-indigo-100 to-purple-100 dark:from-gray-900 dark:to-indigo-900 dark:text-white transition-colors duration-300"
-  >
+>
     <header class="container mx-auto px-4 py-6">
-      <nav class="flex justify-between items-center">
-        <h1
-          class="text-2xl font-bold text-indigo-800 dark:text-indigo-300 animate-fadeInUp"
-        >
-          Sahil Das <span class="animate-waving-hand inline-block">👋</span>
-        </h1>
-        <div class="flex items-center space-x-4">
-          <a
-            href="#about"
-            class="text-indigo-600 hover:text-indigo-800 dark:text-indigo-300 dark:hover:text-indigo-100 transition-colors duration-300 animate-fadeInUp animate-delay-100"
-            >About</a
-          >
-          <a
-            href="#projects"
-            class="text-indigo-600 hover:text-indigo-800 dark:text-indigo-300 dark:hover:text-indigo-100 transition-colors duration-300 animate-fadeInUp animate-delay-200"
-            >Projects</a
-          >
-          <a
-            href="#skills"
-            class="text-indigo-600 hover:text-indigo-800 dark:text-indigo-300 dark:hover:text-indigo-100 transition-colors duration-300 animate-fadeInUp animate-delay-300"
-            >Skills</a
-          >
-          <a
-            href="contact.html"
-            class="text-indigo-600 hover:text-indigo-800 dark:text-indigo-300 dark:hover:text-indigo-100 transition-colors duration-300 animate-fadeInUp animate-delay-300"
-            >Contact</a
-          >
-          <button
-            id="themeToggle"
-            class="p-2 rounded-full bg-indigo-200 dark:bg-indigo-700 transition-colors duration-300 animate-fadeInUp animate-delay-300"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="h-6 w-6 text-indigo-800 dark:text-indigo-200"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
+        <nav class="flex flex-col sm:flex-row justify-between items-center">
+            <h1
+                class="text-2xl font-bold text-indigo-800 dark:text-indigo-300 animate-fadeInUp mb-4 sm:mb-0"
             >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
-              />
-            </svg>
-          </button>
-        </div>
-      </nav>
+                Sahil Das <span class="animate-waving-hand inline-block">👋</span>
+            </h1>
+            <div class="flex flex-wrap justify-center sm:justify-end items-center space-x-4">
+                <a
+                    href="#about"
+                    class="text-indigo-600 hover:text-indigo-800 dark:text-indigo-300 dark:hover:text-indigo-100 transition-colors duration-300 animate-fadeInUp animate-delay-100"
+                    >About</a
+                >
+                <a
+                    href="#projects"
+                    class="text-indigo-600 hover:text-indigo-800 dark:text-indigo-300 dark:hover:text-indigo-100 transition-colors duration-300 animate-fadeInUp animate-delay-200"
+                    >Projects</a
+                >
+                <a
+                    href="#skills"
+                    class="text-indigo-600 hover:text-indigo-800 dark:text-indigo-300 dark:hover:text-indigo-100 transition-colors duration-300 animate-fadeInUp animate-delay-300"
+                    >Skills</a
+                >
+                <a
+                    href="contact.html"
+                    class="text-indigo-600 hover:text-indigo-800 dark:text-indigo-300 dark:hover:text-indigo-100 transition-colors duration-300 animate-fadeInUp animate-delay-300"
+                    >Contact</a
+                >
+                <button
+                    id="themeToggle"
+                    class="p-2 rounded-full bg-indigo-200 dark:bg-indigo-700 transition-colors duration-300 animate-fadeInUp animate-delay-300"
+                    aria-label="Toggle dark mode"
+                >
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-6 w-6 text-indigo-800 dark:text-indigo-200"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                    >
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
+                        />
+                    </svg>
+                </button>
+            </div>
+        </nav>
     </header>
 
     <main class="container mx-auto px-4 py-8">
-      <section id="about" class="mb-16 animate-fadeInUp">
-        <h2
-          class="text-4xl font-bold text-center mb-8 text-indigo-800 dark:text-indigo-300"
-        >
-          Python & Machine Learning Developer
-        </h2>
-        <div class="flex items-center justify-center gap-8 max-w-5xl mx-auto">
-          <!-- Text Content -->
-          <div class="text-xl text-gray-700 dark:text-gray-300 max-w-xl">
-            <p class="mb-4">
-              Hello! I'm Sahil Das, a 3rd Year (Prefinal) B.Tech CSE student at
-              JIS University. I'm passionate about Python development and
-              Machine Learning, constantly exploring new technologies to create
-              innovative solutions.
-            </p>
-            <p>
-              My journey in tech is driven by a deep interest in leveraging
-              Python and ML to solve complex problems. I'm always eager to learn
-              and apply new concepts in my projects.
-            </p>
-          </div>
-
-          <!-- Image on the right -->
-          <div class="w-1/2 max-w-md">
-            <img
-              src="assets/profile2.jpeg"
-              alt="Sahil's image"
-              class="w-full h-auto rounded-full shadow-lg transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-cyan-400 dark:hover:shadow-pink-300"
-            />
-          </div>
-        </div>
-      </section>
-
-      <section id="projects" class="pt-16 mt-16">
-        <h2
-          class="text-3xl font-bold text-center mb-8 text-indigo-800 dark:text-indigo-300 animate-fadeInUp"
-        >
-          Projects
-        </h2>
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
-          <!-- Project 1: Student Management System -->
-          <div
-            class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-indigo-500/50 animate-fadeInUp animate-delay-100"
-          >
-            <img
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/dashboard-rfIz4hX3OecrbOjUlMkkcplSBr3IGO.jpeg"
-              alt="Student Management System Dashboard"
-              class="w-full h-64 object-cover object-top rounded-t-2xl"
-            />
-            <div class="p-6">
-              <h3
-                class="font-bold text-xl mb-2 text-indigo-600 dark:text-indigo-300"
-              >
-                Student Management System
-              </h3>
-              <p class="text-gray-700 dark:text-gray-300 mb-4">
-                A comprehensive system for managing student information,
-                courses, and academic records, built with Python and a web
-                framework.
-              </p>
-              <a
-                href="https://github.com/sahilDas04/student_management_system"
-                target="_blank"
-                class="text-indigo-600 hover:text-indigo-800 dark:text-indigo-300 dark:hover:text-indigo-100 transition-colors duration-300"
-              >
-                View Project
-              </a>
-            </div>
-          </div>
-
-          <!-- Project 2: Youtube Videos Analysis -->
-          <div
-            class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-indigo-500/50 animate-fadeInUp animate-delay-200 relative group"
-          >
-            <!-- Default Image -->
-            <img
-              src="assets/youtube.jpg"
-              alt="Youtube Videos Analysis Thumbnail"
-              class="w-full h-64 object-cover rounded-t-2xl"
-            />
-            <!-- Video -->
-            <video
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/video_analysis-pDLH4TUM7GklgImUo5nkj4ngNMjYhO.webm"
-              class="w-full h-64 object-cover rounded-t-2xl absolute top-0 left-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-              autoplay
-              loop
-              muted
-              playsinline
-            ></video>
-            <!-- Card Content (text stays in place) -->
-            <div class="p-6 relative z-10">
-              <h3
-                class="font-bold text-xl mb-2 text-indigo-600 dark:text-indigo-300"
-              >
-                Youtube Videos Analysis
-              </h3>
-              <p class="text-gray-700 dark:text-gray-300 mb-4">
-                An analytical tool that processes and visualizes data from
-                YouTube videos, providing insights on trends and performance
-                metrics.
-              </p>
-              <a
-                href="https://github.com/sahilDas04/Youtube_Video_Analysis"
-                target="_blank"
-                class="text-indigo-600 hover:text-indigo-800 dark:text-indigo-300 dark:hover:text-indigo-100 transition-colors duration-300"
-              >
-                View Project
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="skills" class="pt-20 mb-16 animate-fadeInUp">
-        <h2
-          class="text-3xl font-bold text-center mb-8 text-indigo-800 dark:text-indigo-300"
-        >
-          Skills
-        </h2>
-        <div class="flex flex-wrap justify-center gap-8">
-          <div class="min-h-screen flex items-center justify-center">
-            <div
-              class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8 p-6"
+        <section id="about" class="mb-16 animate-fadeInUp">
+            <h2
+                class="text-4xl font-bold text-center mb-8 text-indigo-800 dark:text-indigo-300"
             >
-              <!-- Python Card -->
-              <div
-                class="group bg-gradient-to-br from-indigo-200 to-purple-300 dark:from-indigo-900 dark:to-purple-800 rounded-xl p-6 flex flex-col items-center justify-center shadow-2xl hover:shadow-green-500 hover:shadow-lg hover:scale-105 transition-all duration-300"
-              >
-                <img src="assets/python.png" alt="Python" class="w-16 mb-4" />
-                <h3 class="text-lg font-semibold">Python</h3>
-              </div>
-
-              <!-- HTML Card -->
-              <div
-                class="group bg-gradient-to-br from-indigo-200 to-purple-300 dark:from-indigo-900 dark:to-purple-800 rounded-xl p-6 flex flex-col items-center justify-center shadow-2xl hover:shadow-orange-500 hover:shadow-lg hover:scale-105 transition-all duration-300"
-              >
-                <img
-                  src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg"
-                  alt="HTML5"
-                  class="w-16 mb-4"
-                />
-                <h3 class="text-lg font-semibold">HTML</h3>
-              </div>
-
-              <!-- CSS Card -->
-              <div
-                class="group bg-gradient-to-br from-indigo-200 to-purple-300 dark:from-indigo-900 dark:to-purple-800 rounded-xl p-6 flex flex-col items-center justify-center shadow-2xl hover:shadow-blue-500 hover:shadow-lg hover:scale-105 transition-all duration-300"
-              >
-                <img
-                  src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg"
-                  alt="CSS3"
-                  class="w-16 mb-4"
-                />
-                <h3 class="text-lg font-semibold">CSS</h3>
-              </div>
-
-              <!-- Tailwind Card -->
-              <div
-                class="group bg-gradient-to-br from-indigo-200 to-purple-300 dark:from-indigo-900 dark:to-purple-800 rounded-xl p-6 flex flex-col items-center justify-center shadow-2xl hover:shadow-teal-500 hover:shadow-lg hover:scale-105 transition-all duration-300"
-              >
-                <img
-                  src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg"
-                  alt="Tailwind CSS"
-                  class="w-16 mb-4"
-                />
-                <h3 class="text-lg font-semibold">Tailwind</h3>
-              </div>
-
-              <!-- MongoDB Card -->
-              <div
-                class="group bg-gradient-to-br from-indigo-200 to-purple-300 dark:from-indigo-900 dark:to-purple-800 rounded-xl p-6 flex flex-col items-center justify-center shadow-2xl hover:shadow-green-500 hover:shadow-lg hover:scale-105 transition-all duration-300"
-              >
-                <img
-                  src="https://upload.wikimedia.org/wikipedia/commons/9/93/MongoDB_Logo.svg"
-                  alt="MongoDB"
-                  class="w-16 mb-4"
-                />
-                <h3 class="text-lg font-semibold">MongoDB</h3>
-              </div>
-              <!-- Numpy Card -->
-              <div
-                class="group bg-gradient-to-br from-indigo-200 to-purple-300 dark:from-indigo-900 dark:to-purple-800 rounded-xl p-6 flex flex-col items-center justify-center shadow-2xl hover:shadow-cyan-500 hover:shadow-lg hover:scale-105 transition-all duration-300"
-              >
-                <img
-                  src="https://upload.wikimedia.org/wikipedia/commons/3/31/NumPy_logo_2020.svg"
-                  alt="Numpy"
-                  class="w-16 mb-4"
-                />
-                <h3 class="text-lg font-semibold">Numpy</h3>
-              </div>
-
-              <!-- Pandas Card -->
-              <div
-                class="group bg-gradient-to-br from-indigo-200 to-purple-300 dark:from-indigo-900 dark:to-purple-800 rounded-xl p-6 flex flex-col items-center justify-center shadow-2xl hover:shadow-indigo-500 hover:shadow-lg hover:scale-105 transition-all duration-300"
-              >
-                <img
-                  src="https://upload.wikimedia.org/wikipedia/commons/2/22/Pandas_mark.svg"
-                  alt="Pandas"
-                  class="w-16 mb-4"
-                />
-                <h3 class="text-lg font-semibold">Pandas</h3>
-              </div>
-
-              <!-- Github Card -->
-              <div
-                class="group bg-gradient-to-br from-indigo-200 to-purple-300 dark:from-indigo-900 dark:to-purple-800 rounded-xl p-6 flex flex-col items-center justify-center shadow-2xl hover:shadow-white hover:shadow-lg hover:scale-105 transition-all duration-300"
-              >
-                <img
-                  src="assets/github3-removebg-preview.png"
-                  alt="Github"
-                  class="w-16 mb-4"
-                />
-                <h3 class="text-lg font-semibold">Github</h3>
-              </div>
+                Python & Machine Learning Developer
+            </h2>
+            <div class="flex flex-col md:flex-row items-center justify-center gap-8 max-w-5xl mx-auto">
+                <div class="text-xl text-gray-700 dark:text-gray-300 max-w-xl">
+                    <p class="mb-4">
+                        Hello! I'm Sahil Das, a 3rd Year (Prefinal) B.Tech CSE student at
+                        JIS University. I'm passionate about Python development and
+                        Machine Learning, constantly exploring new technologies to create
+                        innovative solutions.
+                    </p>
+                    <p>
+                        My journey in tech is driven by a deep interest in leveraging
+                        Python and ML to solve complex problems. I'm always eager to learn
+                        and apply new concepts in my projects.
+                    </p>
+                </div>
+                <div class="w-full md:w-1/2 max-w-md mt-8 md:mt-0">
+                    <img
+                        src="assets/profile2.jpeg"
+                        alt="Sahil's profile picture"
+                        class="w-full h-auto rounded-full shadow-lg transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-cyan-400 dark:hover:shadow-pink-300"
+                    />
+                </div>
             </div>
-          </div>
-        </div>
-      </section>
+        </section>
+
+        <section id="projects" class="pt-16 mt-16">
+            <h2
+                class="text-3xl font-bold text-center mb-8 text-indigo-800 dark:text-indigo-300 animate-fadeInUp"
+            >
+                Projects
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <div
+                    class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-indigo-500/50 animate-fadeInUp animate-delay-100"
+                >
+                    <img
+                        src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/dashboard-rfIz4hX3OecrbOjUlMkkcplSBr3IGO.jpeg"
+                        alt="Student Management System Dashboard"
+                        class="w-full h-64 object-cover object-top rounded-t-2xl"
+                    />
+                    <div class="p-6">
+                        <h3
+                            class="font-bold text-xl mb-2 text-indigo-600 dark:text-indigo-300"
+                        >
+                            Student Management System
+                        </h3>
+                        <p class="text-gray-700 dark:text-gray-300 mb-4">
+                            A comprehensive system for managing student information,
+                            courses, and academic records, built with Python and a web
+                            framework.
+                        </p>
+                        <a
+                            href="https://github.com/sahilDas04/student_management_system"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="text-indigo-600 hover:text-indigo-800 dark:text-indigo-300 dark:hover:text-indigo-100 transition-colors duration-300"
+                        >
+                            View Project
+                        </a>
+                    </div>
+                </div>
+
+                <div
+                    class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-indigo-500/50 animate-fadeInUp animate-delay-200 relative group"
+                >
+                    <img
+                        src="assets/youtube.jpg"
+                        alt="Youtube Videos Analysis Thumbnail"
+                        class="w-full h-64 object-cover rounded-t-2xl"
+                    />
+                    <video
+                        src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/video_analysis-pDLH4TUM7GklgImUo5nkj4ngNMjYhO.webm"
+                        class="w-full h-64 object-cover rounded-t-2xl absolute top-0 left-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                        autoplay
+                        loop
+                        muted
+                        playsinline
+                    ></video>
+                    <div class="p-6 relative z-10">
+                        <h3
+                            class="font-bold text-xl mb-2 text-indigo-600 dark:text-indigo-300"
+                        >
+                            Youtube Videos Analysis
+                        </h3>
+                        <p class="text-gray-700 dark:text-gray-300 mb-4">
+                            An analytical tool that processes and visualizes data from
+                            YouTube videos, providing insights on trends and performance
+                            metrics.
+                        </p>
+                        <a
+                            href="https://github.com/sahilDas04/Youtube_Video_Analysis"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="text-indigo-600 hover:text-indigo-800 dark:text-indigo-300 dark:hover:text-indigo-100 transition-colors duration-300"
+                        >
+                            View Project
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="pt-20 mb-16 animate-fadeInUp">
+            <h2
+                class="text-3xl font-bold text-center mb-8 text-indigo-800 dark:text-indigo-300"
+            >
+                Skills
+            </h2>
+            <div class="flex flex-wrap justify-center gap-8">
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8 p-6">
+                    <div
+                        class="group bg-gradient-to-br from-indigo-200 to-purple-300 dark:from-indigo-900 dark:to-purple-800 rounded-xl p-6 flex flex-col items-center justify-center shadow-2xl hover:shadow-green-500 hover:shadow-lg hover:scale-105 transition-all duration-300"
+                    >
+                        <img src="assets/python.png" alt="Python" class="w-16 mb-4" />
+                        <h3 class="text-lg font-semibold">Python</h3>
+                    </div>
+
+                    <div
+                        class="group bg-gradient-to-br from-indigo-200 to-purple-300 dark:from-indigo-900 dark:to-purple-800 rounded-xl p-6 flex flex-col items-center justify-center shadow-2xl hover:shadow-orange-500 hover:shadow-lg hover:scale-105 transition-all duration-300"
+                    >
+                        <img
+                            src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg"
+                            alt="HTML5"
+                            class="w-16 mb-4"
+                        />
+                        <h3 class="text-lg font-semibold">HTML</h3>
+                    </div>
+
+                    <div
+                        class="group bg-gradient-to-br from-indigo-200 to-purple-300 dark:from-indigo-900 dark:to-purple-800 rounded-xl p-6 flex flex-col items-center justify-center shadow-2xl hover:shadow-blue-500 hover:shadow-lg hover:scale-105 transition-all duration-300"
+                    >
+                        <img
+                            src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg"
+                            alt="CSS3"
+                            class="w-16 mb-4"
+                        />
+                        <h3 class="text-lg font-semibold">CSS</h3>
+                    </div>
+
+                    <div
+                        class="group bg-gradient-to-br from-indigo-200 to-purple-300 dark:from-indigo-900 dark:to-purple-800 rounded-xl p-6 flex flex-col items-center justify-center shadow-2xl hover:shadow-teal-500 hover:shadow-lg hover:scale-105 transition-all duration-300"
+                    >
+                        <img
+                            src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg"
+                            alt="Tailwind CSS"
+                            class="w-16 mb-4"
+                        />
+                        <h3 class="text-lg font-semibold">Tailwind</h3>
+                    </div>
+
+                    <div
+                        class="group bg-gradient-to-br from-indigo-200 to-purple-300 dark:from-indigo-900 dark:to-purple-800 rounded-xl p-6 flex flex-col items-center justify-center shadow-2xl hover:shadow-green-500 hover:shadow-lg hover:scale-105 transition-all duration-300"
+                    >
+                        <img
+                            src="https://upload.wikimedia.org/wikipedia/commons/9/93/MongoDB_Logo.svg"
+                            alt="MongoDB"
+                            class="w-16 mb-4"
+                        />
+                        <h3 class="text-lg font-semibold">MongoDB</h3>
+                    </div>
+
+                    <div
+                        class="group bg-gradient-to-br from-indigo-200 to-purple-300 dark:from-indigo-900 dark:to-purple-800 rounded-xl p-6 flex flex-col items-center justify-center shadow-2xl hover:shadow-cyan-500 hover:shadow-lg hover:scale-105 transition-all duration-300"
+                    >
+                        <img
+                            src="https://upload.wikimedia.org/wikipedia/commons/3/31/NumPy_logo_2020.svg"
+                            alt="Numpy"
+                            class="w-16 mb-4"
+                        />
+                        <h3 class="text-lg font-semibold">Numpy</h3>
+                    </div>
+
+                    <div
+                        class="group bg-gradient-to-br from-indigo-200 to-purple-300 dark:from-indigo-900 dark:to-purple-800 rounded-xl p-6 flex flex-col items-center justify-center shadow-2xl hover:shadow-indigo-500 hover:shadow-lg hover:scale-105 transition-all duration-300"
+                    >
+                        <img
+                            src="https://upload.wikimedia.org/wikipedia/commons/2/22/Pandas_mark.svg"
+                            alt="Pandas"
+                            class="w-16 mb-4"
+                        />
+                        <h3 class="text-lg font-semibold">Pandas</h3>
+                    </div>
+
+                    <div
+                        class="group bg-gradient-to-br from-indigo-200 to-purple-300 dark:from-indigo-900 dark:to-purple-800 rounded-xl p-6 flex flex-col items-center justify-center shadow-2xl hover:shadow-white hover:shadow-lg hover:scale-105 transition-all duration-300"
+                    >
+                        <img
+                            src="assets/github3-removebg-preview.png"
+                            alt="Github"
+                            class="w-16 mb-4"
+                        />
+                        <h3 class="text-lg font-semibold">Github</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer class="bg-indigo-800 dark:bg-gray-900 text-white py-8">
-      <div class="container mx-auto px-4 text-center">
-        <div class="flex justify-center space-x-4 mb-4">
-          <a
-            href="https://github.com/sahilDas04"
-            target="_blank"
-            class="hover:text-indigo-300 transition-colors duration-300"
-            >GitHub</a
-          >
-          <a
-            href="#"
-            target="_blank"
-            class="hover:text-indigo-300 transition-colors duration-300"
-            >LinkedIn</a
-          >
-          <a
-            href="#"
-            target="_blank"
-            class="hover:text-indigo-300 transition-colors duration-300"
-            >Twitter</a
-          >
+        <div class="container mx-auto px-4 text-center">
+            <div class="flex justify-center space-x-4 mb-4">
+                <a
+                    href="https://github.com/sahilDas04"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="hover:text-indigo-300 transition-colors duration-300"
+                >GitHub</a>
+                <a
+                    href="#"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="hover:text-indigo-300 transition-colors duration-300"
+                >LinkedIn</a>
+                <a
+                    href="#"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="hover:text-indigo-300 transition-colors duration-300"
+                >Twitter</a>
+            </div>
+            <p>&copy; 2024 Sahil Das. All rights reserved.</p>
         </div>
-        <p>&copy; 2024 Sahil Das. All rights reserved.</p>
-      </div>
     </footer>
 
     <script>
-      const themeToggle = document.getElementById("themeToggle");
-      const html = document.documentElement;
+        const themeToggle = document.getElementById("themeToggle");
+        const html = document.documentElement;
 
-      themeToggle.addEventListener("click", () => {
-        html.classList.toggle("dark");
-        localStorage.setItem(
-          "theme",
-          html.classList.contains("dark") ? "dark" : "light"
-        );
-      });
+        themeToggle.addEventListener("click", () => {
+            html.classList.toggle("dark");
+            localStorage.setItem(
+                "theme",
+                html.classList.contains("dark") ? "dark" : "light"
+            );
+        });
 
-      // Check for saved theme preference or prefer-color-scheme
-      const savedTheme = localStorage.getItem("theme");
-      const prefersDark = window.matchMedia(
-        "(prefers-color-scheme: dark)"
-      ).matches;
+        // Check for saved theme preference or prefer-color-scheme
+        const savedTheme = localStorage.getItem("theme");
+        const prefersDark = window.matchMedia(
+            "(prefers-color-scheme: dark)"
+        ).matches;
 
-      if (savedTheme === "dark" || (!savedTheme && prefersDark)) {
-        html.classList.add("dark");
-      }
+        if (savedTheme === "dark" || (!savedTheme && prefersDark)) {
+            html.classList.add("dark");
+        }
     </script>
-  </body>
+</body>
 </html>
+
